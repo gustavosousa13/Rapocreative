@@ -6,19 +6,19 @@ function Cover() {
 
   const items = [
     {
-      src: "src/assets/RapoSlide.jpg",
+      src: "assets/RapoSlide.jpg",
       alt: "First slide"
     },
     {
-      src: "src/assets/banner2.jpg",
+      src: "assets/banner2.jpg",
       alt: "Second slide"
     },
     {
-      src: "src/assets/BannerGardenia.jpg",
+      src: "assets/BannerGardenia.jpg",
       alt: "Third slide"
     },
     {
-      src: "src/assets/BannerTempero.jpg",
+      src: "assets/BannerTempero.jpg",
       alt: "Fourth slide"
     }
   ];

@@ -4,7 +4,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 export default function GridImage() {
   return (
-    <ImageList sx={{ width: 300, height: 'auto', overflow:'hidden'}} cols={3} >
+    <ImageList sx={{ width: 300, height: 'auto', overflow: 'hidden' }} cols={3}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -21,28 +21,27 @@ export default function GridImage() {
 
 const itemData = [
   {
-    img: 'src/assets/palermo1.png',
+    img: `${import.meta.env.BASE_URL}assets/palermo1.png`,
     title: 'Breakfast',
   },
   {
-    img: 'src/assets/palermo2.jpg',
+    img: `${import.meta.env.BASE_URL}assets/palermo2.jpg`,
     title: 'Burger',
   },
   {
-    img: 'src/assets/palermo3.jpg',
+    img: `${import.meta.env.BASE_URL}assets/palermo3.jpg`,
     title: 'Camera',
   },
   {
-    img: 'src/assets/palermo4.jpg',
+    img: `${import.meta.env.BASE_URL}assets/palermo4.jpg`,
     title: 'Coffee',
   },
   {
-    img: 'src/assets/palermo5.jpg',
+    img: `${import.meta.env.BASE_URL}assets/palermo5.jpg`,
     title: 'Hats',
   },
   {
     img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
     title: 'Honey',
   },
-  
 ];

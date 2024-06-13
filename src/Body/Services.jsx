@@ -12,8 +12,8 @@ export default function Services() {
           <Grid item xs={12} sm={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box
               sx={{
-                width: { xs: '80%', sm: '90%' },
-                height: { xs: 'auto', sm: '500px' },
+                width: { xs: '50%', sm: '100%' },
+                height: { xs: 'auto', sm: '400px' },
                 '& img': {
                   width: '100%',
                   height: '100%',
@@ -23,7 +23,7 @@ export default function Services() {
                 },
               }}
             >
-              <img src='src/assets/inspiramais08.jpg' alt="Service 1" />
+              <img src='assets/inspiramais08.jpg' alt="Service 1" />
             </Box>
           </Grid>
         )}

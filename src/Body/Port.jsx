@@ -11,7 +11,7 @@ const ParallaxContainer = styled(Box)({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  textAlign: 'center', // Centraliza o texto horizontalmente
+  textAlign: 'center',
 });
 
 const ParallaxImage = styled(Box)({
@@ -20,7 +20,7 @@ const ParallaxImage = styled(Box)({
   left: 0,
   width: '100%',
   height: '900px',
-  backgroundImage: 'url("src/assets/RapoCreativeEstamparia2.jpg")', // substitua pelo caminho da sua imagem
+  backgroundImage: 'url("assets/RapoCreativeEstamparia2.jpg")',
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
   backgroundPosition: 'center',
@@ -32,7 +32,7 @@ const Title = styled(Typography)({
   fontWeight: 'bold',
   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
   zIndex: 1,
-  marginBottom: '20px', // Espaçamento entre o título e o texto
+  marginBottom: '20px',
 });
 
 const SubText = styled(Typography)({
@@ -40,7 +40,7 @@ const SubText = styled(Typography)({
   fontSize: '24px',
   textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
   zIndex: 1,
-  marginBottom: '20px', // Espaçamento entre o texto e o botão
+  marginBottom: '20px', 
 });
 
 const StyledButton = styled(Button)({

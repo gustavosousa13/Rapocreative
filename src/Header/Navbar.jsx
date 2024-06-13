@@ -81,7 +81,7 @@
               }}
             >
           <Box component="img"
-                src="src/assets/logo-rapo2.png"
+                src="assets/logo-rapo2.png"
                 alt="Logo"
                 sx={{ width: '200px', 
                   height: 'auto',

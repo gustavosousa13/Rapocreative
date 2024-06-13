@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '@mui/system';
 
 const images = [
-  '/src/assets/logos.jpg',
+  'assets/logos.jpg',
 ];
 
 const AnimatedImages = () => {

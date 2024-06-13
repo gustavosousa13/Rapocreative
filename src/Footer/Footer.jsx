@@ -13,7 +13,7 @@ const Footer = () => {
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4} md={3}>
             <Box component="img"
-                src="src/assets/logo-rapo.png"
+                src="assets/logo-rapo.png"
                 alt="Logo"
                 sx={{ width: '200px', height: 'auto', marginLeft:'-20px' }} 
             />
