@@ -1,13 +1,13 @@
 import './App.css';
-import DrawerAppBar from './Header/Navbar';
-import Cover from './Header/Cover1';
+import DrawerAppBar from './Components/Header/Navbar';
+import Cover from './Components/Header/Cover1';
 import { Box } from '@mui/material';
-import Presentation from './Body/Presentation';
-import Services from './Body/Services';
-import ParallaxComponent from './Body/Port';
-import Subscribe from './Body/Subscribe';
-import AnimatedImages from './Body/Customers';
-import Footer from './Footer/Footer';
+import Presentation from './Components/Body/Presentation';
+import Services from './Components/Body/Services';
+import ParallaxComponent from './Components/Body/Port';
+import Subscribe from './Components/Body/Subscribe';
+import AnimatedImages from './Components/Body/Customers';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
