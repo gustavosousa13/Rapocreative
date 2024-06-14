@@ -64,7 +64,7 @@
               margin: 0,
               padding: 0,
               boxSizing: 'border-box',
-              overflow: 'hidden' // Ensures no content exceeds the box
+              overflow: 'hidden' 
             }}
           >
             <Box
@@ -137,7 +137,7 @@
             open={mobileOpen}
             onClose={handleDrawerToggle}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true, 
             }}
             sx={{
               display: { xs: 'block', sm: 'none' },
@@ -150,7 +150,7 @@
         <Box component="main" sx={{ p: 0, flexGrow: 1 }}>
           <Toolbar />
           <Typography>
-            {/* Conteúdo principal */}
+          
           </Typography>
         </Box>
       </Box>

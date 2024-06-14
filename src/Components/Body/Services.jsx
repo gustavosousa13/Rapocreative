@@ -1,54 +1,101 @@
-import { Box, Grid, useMediaQuery, useTheme, Typography } from '@mui/material';
 import React from 'react';
+import { Box, Typography, Grid } from '@mui/material';
 
-export default function Services() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  
+const services = [
+  {
+    title: 'Estampas exclusivas',
+    description: 'Crimamos estampas exclusivas para sua empresa.',
+    image: 'public/assets/banner5.jpg',
+  },
+  {
+    title: 'Sob briefing',
+    description: 'Criamos estampas sob briefing, de modo que o cliente possa acompanhar o processo de criação.',
+    image: 'public/assets/Capa2B.jpg', 
+  },
+  {
+    title: 'Estampas não exclusivas',
+    description: 'Temos um catálogo de estampas não exclusivas, caso não necessite de exclusividade.',
+    image: 'public/assets/referencia1.jpg', 
+  },
+];
+
+const ServicesSection = () => {
   return (
-    <Box sx={{ borderTop:'solid 1px', height: '80vh', mt: '30px', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <Grid container spacing={2} sx={{ width: '80%', height: '100%' }}>
-        {!isMobile && (
-          <Grid item xs={12} sm={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <Box
+      sx={{
+        height: '65vh',
+        width: '1400px',
+        margin: '0 auto',
+        padding: '20px',
+        boxSizing: 'border-box',
+        marginLeft:'-60px',
+        marginTop:'-26px'
+      }}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginBottom: '20px',
+        }}
+      >
+        <Box sx={{ borderBottom: '1px solid black', width: '100%' }} />
+        <Typography variant="h4" sx={{ margin: '10px 0' }}>
+          Nossos Serviços
+        </Typography>
+        <Box sx={{ borderBottom: '1px solid black', width: '100%' }} />
+      </Box>
+
+      <Grid container spacing={2} sx={{ height: 'calc(60vh - 60px)' }}>
+        {services.map((service, index) => (
+          <Grid
+            item
+            xs={4}
+            key={index}
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRight: index < 2 ? '1px solid black' : 'none',
+              boxSizing: 'border-box',
+            }}
+          >
+            <Typography variant="h5" sx={{ marginBottom: '10px' }}>
+              {service.title}
+            </Typography>
             <Box
+              component="img"
+              src={service.image}
+              alt={service.title}
               sx={{
-                width: { xs: '50%', sm: '100%' },
-                height: { xs: 'auto', sm: '400px' },
-                '& img': {
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  justifyContent: 'center',
-                  alignItems:'center',            
-                },
+                width: '300px',
+                height: '150px',
+                backgroundColor: 'lightgray',
+                marginBottom: '10px',
+                objectFit:'cover',
+                borderRadius: '50px',
               }}
-            >
-              <img src='assets/inspiramais08.jpg' alt="Service 1" />
-            </Box>
+            />
+            <Typography variant="body1"   sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginLeft:'45px',
+              marginRight:'45px',
+              textAlign:'center',
+              
+              
+            }}>
+              {service.description}
+            </Typography>
           </Grid>
-        )}
-        <Grid item xs={12} sm={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', textAlign: 'left',  }}>
-          <Typography variant="h2" sx={{ fontSize: { xs: '1.5rem', sm: '2rem' } }}>Nossos Serviços</Typography>
-          <Typography variant="body1" sx={{ mt: 2, fontSize: { xs: '1rem', sm: '1.25rem' } }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam distinctio neque
-            nostrum inventore accusamus quaerat dolorum assumenda facilis voluptas,
-            quas repellat, officiis tenetur accusantium incidunt! Vel corrupti amet laborum modi.
-          </Typography>
-        </Grid>
+        ))}
       </Grid>
-      {!isMobile && (
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            left: '50%',
-            width: '1px',
-            backgroundColor: 'black',
-            transform: 'translateX(-50%)',
-          }}
-        />
-      )}
     </Box>
   );
-}
+};
+
+export default ServicesSection;

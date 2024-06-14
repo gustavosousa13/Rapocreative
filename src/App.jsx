@@ -3,21 +3,19 @@ import DrawerAppBar from './Components/Header/Navbar';
 import Cover from './Components/Header/Cover1';
 import { Box } from '@mui/material';
 import Presentation from './Components/Body/Presentation';
-import Services from './Components/Body/Services';
+import ServicesSection from './Components/Body/Services';
 import ParallaxComponent from './Components/Body/Port';
 import Subscribe from './Components/Body/Subscribe';
 import AnimatedImages from './Components/Body/Customers';
 import Footer from './Components/Footer/Footer';
-import { Link as ScrollLink, Element } from 'react-scroll';
-
 
 function App() {
   return (
     <Box style={{ overflowX: 'hidden' }}>
       <DrawerAppBar />
       <Cover />
+      <ServicesSection />
       <Presentation />
-      <Services />
       <AnimatedImages />
       <ParallaxComponent/>
       <Subscribe />
