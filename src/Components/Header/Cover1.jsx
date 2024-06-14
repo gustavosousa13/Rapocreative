@@ -10,7 +10,7 @@ function Cover() {
       position: 'left center'
     },
     {
-      src: "public/assets/Banner_Gardenia-C.jpg",
+      src: "assets/Banner_Gardenia-C.jpg",
       alt: "Second slide",
       position: 'right' 
     },

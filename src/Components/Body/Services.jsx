@@ -5,17 +5,17 @@ const services = [
   {
     title: 'Estampas exclusivas',
     description: 'Crimamos estampas exclusivas para sua empresa.',
-    image: 'public/assets/banner5.jpg',
+    image: 'assets/banner5.jpg',
   },
   {
     title: 'Sob briefing',
     description: 'Criamos estampas sob briefing, de modo que o cliente possa acompanhar o processo de criação.',
-    image: 'public/assets/Capa2B.jpg', 
+    image: 'assets/Capa2B.jpg', 
   },
   {
     title: 'Estampas não exclusivas',
     description: 'Temos um catálogo de estampas não exclusivas, caso não necessite de exclusividade.',
-    image: 'public/assets/referencia1.jpg', 
+    image: 'assets/referencia1.jpg', 
   },
 ];
 
