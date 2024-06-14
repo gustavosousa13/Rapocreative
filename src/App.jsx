@@ -8,6 +8,8 @@ import ParallaxComponent from './Components/Body/Port';
 import Subscribe from './Components/Body/Subscribe';
 import AnimatedImages from './Components/Body/Customers';
 import Footer from './Components/Footer/Footer';
+import { Link as ScrollLink, Element } from 'react-scroll';
+
 
 function App() {
   return (

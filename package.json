@@ -28,6 +28,7 @@
     "react-material-ui-carousel": "^3.4.2",
     "react-parallax": "^3.5.1",
     "react-parallax-tilt": "^1.7.228",
+    "react-scroll": "^1.9.0",
     "react-scroll-parallax": "^3.4.5",
     "rellax": "^1.12.1",
     "styled-components": "^6.1.11",
