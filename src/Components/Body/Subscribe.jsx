@@ -2,18 +2,47 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
+import { Typography } from '@mui/material';
 
 export default function Subscribe() {
   return (
-    <Box sx={{borderTop:'solid 1px'}}>
+    <Box sx={{borderTop:'solid 1px' , flexDirection: 'row', height:'60vh', marginLeft:'50px', marginRight:'50px', fontFamily: 'Poppins, sans-serif',}}>
+    
+    
+    <Box
+      sx={{
+        width: '50%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        paddingLeft: '50px',
+        paddingTop:'100px'
+      }}
+    >
+      <Typography
+        variant="h4"
+        sx={{ textAlign: 'left', marginBottom: '20px', marginRight: '30px' }}
+      >
+        Cadastre-se para mais informações.
+      </Typography>
+      <Typography
+        variant="body1"
+        sx={{ textAlign: 'left', marginRight: '30px' }}
+      >
+       Deixe aqui seu contato, para receber nossas novidades e para entrar em contato para mais informações.
+      </Typography>
+    </Box>
+     
+    
     <Box
       component="form"
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
-        marginLeft: '800px', 
-        marginTop: '30px',
+        
+        marginLeft: '600px', 
+        marginTop: '-220px',
         height:'350px',
         marginRight:'30px'
         }}
