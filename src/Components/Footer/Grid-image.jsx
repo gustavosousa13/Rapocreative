@@ -25,19 +25,19 @@ const itemData = [
     title: 'Breakfast',
   },
   {
-    img: `${import.meta.env.BASE_URL}assets/palermo2.jpg`,
+    img: 'assets/palermo2.jpg',
     title: 'Burger',
   },
   {
-    img: `${import.meta.env.BASE_URL}assets/palermo3.jpg`,
+    img: 'assets/palermo3.jpg',
     title: 'Camera',
   },
   {
-    img: `${import.meta.env.BASE_URL}assets/palermo4.jpg`,
+    img: 'assets/palermo4.jpg',
     title: 'Coffee',
   },
   {
-    img: `${import.meta.env.BASE_URL}assets/palermo5.jpg`,
+    img: 'assets/palermo5.jpg',
     title: 'Hats',
   },
   {
