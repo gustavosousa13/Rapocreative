@@ -6,7 +6,7 @@ import { Typography } from '@mui/material';
 
 export default function Subscribe() {
   return (
-    <Box sx={{borderTop:'solid 1px' , flexDirection: 'row', height:'60vh', marginLeft:'50px', marginRight:'50px', fontFamily: 'Poppins, sans-serif',}}>
+    <Box sx={{borderTop:'solid 1px' , flexDirection: 'row', height:'65vh', marginLeft:'50px', marginRight:'50px', fontFamily: 'Poppins, sans-serif',}}>
     
     
     <Box
@@ -22,13 +22,13 @@ export default function Subscribe() {
     >
       <Typography
         variant="h4"
-        sx={{ textAlign: 'left', marginBottom: '20px', marginRight: '30px' }}
+        sx={{ textAlign: 'left', marginBottom: '20px', marginRight: '30px',marginLeft:'-35px', fontFamily:'poppins' }}
       >
         Cadastre-se para mais informações.
       </Typography>
       <Typography
         variant="body1"
-        sx={{ textAlign: 'left', marginRight: '30px' }}
+        sx={{ textAlign: 'left', marginRight: '140px',marginLeft:'-35px', fontFamily:'poppins' }}
       >
        Deixe aqui seu contato, para receber nossas novidades e para entrar em contato para mais informações.
       </Typography>
@@ -40,17 +40,17 @@ export default function Subscribe() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        
-        marginLeft: '600px', 
+        marginLeft: '650px', 
         marginTop: '-220px',
         height:'350px',
-        marginRight:'30px'
+        marginRight:'-25px'
         }}
       noValidate
       autoComplete="off"
     >
-      <Grid container spacing={2}>
-        <Grid item xs={8} sm={8}>
+      <Box sx={{marginRight:'-100px'}}>
+      <Grid container spacing={2} >
+        <Grid item xs={8} sm={6}>
           <TextField
             id="outlined-multiline-flexible"
             label="Nome completo"
@@ -66,7 +66,7 @@ export default function Subscribe() {
             fullWidth
           />
         </Grid>
-        <Grid item xs={6} sm={8}>
+        <Grid item xs={6} sm={10}>
           <TextField
             id="outlined-textarea"
             label="Email"
@@ -74,7 +74,7 @@ export default function Subscribe() {
             fullWidth
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={10} >
           <TextField
             id="outlined-multiline-static"
             label="Digite sua mensagem"
@@ -82,12 +82,11 @@ export default function Subscribe() {
             multiline
             rows={6}
             fullWidth
-            sx={{
-              width: '470px',  // Define a largura de 600px
-            }}
+           
           />
         </Grid>
       </Grid>
+      </Box>
     </Box>
     </Box>
   );

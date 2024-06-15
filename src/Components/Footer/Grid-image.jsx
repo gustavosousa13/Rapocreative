@@ -4,7 +4,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 export default function GridImage() {
   return (
-    <ImageList sx={{ width: 300, height: 'auto', overflow: 'hidden' }} cols={3}>
+    <ImageList sx={{marginRight:'50px', width: 350, height: '350', overflow: 'hidden' }} cols={3}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img

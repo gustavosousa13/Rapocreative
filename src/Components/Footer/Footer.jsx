@@ -8,21 +8,21 @@ import GridImage from './Grid-image.jsx';
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: '#F2F1E4', py: 6, borderTop:'solid 1px' }}>
+    <Box sx={{ backgroundColor: '#F2F1E4', py: 6, borderTop:'solid 1px', height:'70vh'}}>
       <Container maxWidth="xl" sx={{ px: 0 }}>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4} md={3}>
             <Box component="img"
                 src="assets/logo-rapo.png"
                 alt="Logo"
-                sx={{ width: '200px', height: 'auto', marginLeft:'-20px' }} 
+                sx={{ width: '270px', height: 'auto', marginLeft:'0px' }} 
             />
             
-            <Typography variant="body2" sx={{ letterSpacing: 0, fontFamily: 'Poppins, sans-serif' }}>
+            <Typography variant="body1" sx={{fontSize:'14px', letterSpacing: 0, fontFamily: 'Poppins, sans-serif', marginLeft:'30px', lineHeight:'px' }}>
             Utilizamos técnicas inovadoras para produzir estampas vibrantes e cheias de personalidade. 
             Seja para uma coleção completa ou uma peça única.
             </Typography>
-            <Stack direction="row" spacing={1} sx={{ mt: 2 }}>
+            <Stack direction="row" spacing={2} sx={{ mt: 2, marginLeft:'20px' }}>
               <IconButton href="#" aria-label="Instagram">
                 <InstagramIcon />
               </IconButton>
@@ -39,51 +39,105 @@ const Footer = () => {
             </Stack>
           </Grid>
           <Grid item xs={12} sm={4} md={3}>
-            <Typography variant="h6" gutterBottom sx={{ letterSpacing: 2, fontFamily: 'Poppins, sans-serif' }}>
-              Navigation
-            </Typography>
-            <Stack sx={{ gap: '15px', fontFamily: 'Poppins, sans-serif' }}>
-              <Link href="#" underline="none">
-                <Typography variant="body2" sx={{ letterSpacing: 0 }}>
-                  HOME
-                </Typography>
-              </Link>
-              <Link href="#" underline="none">
-                <Typography variant="body2" sx={{ letterSpacing: 0 }}>
-                  SERVICES
-                </Typography>
-              </Link>
-              <Link href="#" underline="none">
-                <Typography variant="body2" sx={{ letterSpacing: 0 }}>
-                  ABOUT
-                </Typography>
-              </Link>
-              <Link href="#" underline="none">
-                <Typography variant="body2" sx={{ letterSpacing: 0 }}>
-                  CONTACT
-                </Typography>
-              </Link>
-              <Link href="#" underline="none">
-                <Typography variant="body2" sx={{ letterSpacing: 0 }}>
-                  BLOG
-                </Typography>
-              </Link>
-              <Link href="#" underline="none">
-                <Typography variant="body2" sx={{ letterSpacing: 0 }}>
-                  PROGRAM
-                </Typography>
-              </Link>
-            </Stack>
+      <Stack sx={{ gap: '15px', fontFamily: 'Poppins, sans-serif', color: 'black', marginTop:'80px', marginLeft:'130px' }}>
+        <Grid container spacing={8}>
+          <Grid item xs={6}>
+            <Link href="#" underline="none">
+              <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding:'10px'}}>
+                HOME
+              </Typography>
+            </Link>
+            <Link href="#" underline="none">
+              <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding:'10px' }}>
+                SERVICES
+              </Typography>
+            </Link>
+            <Link href="#" underline="none">
+              <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding:'10px' }}>
+                ABOUT
+              </Typography>
+            </Link>
           </Grid>
+          <Grid item xs={6}>
+            <Link href="#" underline="none">
+              <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding:'10px' }}>
+                CONTACT
+              </Typography>
+            </Link>
+            <Link href="#" underline="none">
+              <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding:'10px' }}>
+                BLOG
+              </Typography>
+            </Link>
+            <Link href="#" underline="none">
+              <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding:'10px' }}>
+                PROGRAM
+              </Typography>
+            </Link>
+          </Grid>
+        </Grid>
+      </Stack>
+    </Grid>
           <Grid item xs={12} sm={4} md={6}>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' , marginRight:'-250px'}}>
               <GridImage/>
             </Box>
           </Grid>
         </Grid>
-        <Typography variant="body2" textAlign="center" mt={2} sx={{ letterSpacing: 3, fontFamily: 'Poppins, sans-serif' }}>
+        <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        width: '100%',
+        padding: '10px 0',
+      }}
+    >
+      <Box
+        component="img"
+        sx={{
+          width: 450,
+          height: 80,
+          marginLeft: -5,
+        }}
+        alt="Imagem rodape"
+        src="assets/rodape2.png"
+      />
+      <Box
+        sx={{
+          flex: 1,
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <Typography
+          variant="body3"
+          textAlign="center"
+          sx={{
+            letterSpacing: 1,
+            fontFamily: 'Poppins, sans-serif',
+            whiteSpace: 'nowrap', 
+            paddingLeft:15,
+            paddingRight:15,
+            width:10,
+            fontSize:15
+          }}
+        >
           &copy; 2024 Rapó Creative
         </Typography>
+      </Box>
+      <Box
+        component="img"
+        sx={{
+          width: 450,
+          height: 80,
+          marginLeft: 30,
+          marginRight:0,
+        }}
+        alt="Imagem rodape"
+        src="assets/rodape1.png"
+      />
+    </Box>
       </Container>
     </Box>
   );

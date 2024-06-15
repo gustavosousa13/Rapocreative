@@ -29,7 +29,8 @@ const ServicesSection = () => {
         padding: '20px',
         boxSizing: 'border-box',
         marginLeft:'-60px',
-        marginTop:'-26px'
+        marginTop:'-26px',
+        
       }}
     >
       <Box
@@ -42,7 +43,7 @@ const ServicesSection = () => {
         }}
       >
         <Box sx={{ borderBottom: '1px solid black', width: '100%' }} />
-        <Typography variant="h4" sx={{ margin: '10px 0' }}>
+        <Typography variant="h4" sx={{ margin: '10px 0', fontFamily:'poppins' }}>
           Nossos Serviços
         </Typography>
         <Box sx={{ borderBottom: '1px solid black', width: '100%' }} />
@@ -61,9 +62,10 @@ const ServicesSection = () => {
               justifyContent: 'center',
               borderRight: index < 2 ? '1px solid black' : 'none',
               boxSizing: 'border-box',
+              
             }}
           >
-            <Typography variant="h5" sx={{ marginBottom: '10px' }}>
+            <Typography variant="h5" sx={{ marginBottom: '10px', fontFamily:'poppins' }}>
               {service.title}
             </Typography>
             <Box
@@ -86,6 +88,7 @@ const ServicesSection = () => {
               marginLeft:'45px',
               marginRight:'45px',
               textAlign:'center',
+              fontFamily:'poppins'
               
               
             }}>

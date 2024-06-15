@@ -59,8 +59,8 @@ const ParallaxComponent = () => {
   return (
     <ParallaxContainer>
       <ParallaxImage />
-      <Title variant="h1">RAPÓ CREATIVE</Title>
-      <SubText variant="h6">Descubra o mundo de cores e formas inspiradoras</SubText>
+      <Title sx={{fontFamily:'poppins'}} variant="h1">RAPÓ CREATIVE</Title>
+      <SubText sx={{fontFamily:'poppins'}} variant="h6">Descubra o mundo de cores e formas inspiradoras</SubText>
       <StyledButton>Saiba Mais</StyledButton>
     </ParallaxContainer>
   );
