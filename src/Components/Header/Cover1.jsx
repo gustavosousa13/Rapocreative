@@ -27,29 +27,39 @@ function Cover() {
   ];
 
   return (
-    <Carousel
-      className="carrossel"
-      sx={{ position: 'relative', zIndex: 2 }}
-      interval={3000}
-      indicators={false}
-      navButtonsAlwaysVisible={true}
-      animation="fade"
+    <Box
+      sx={{
+        display: {
+          xs: 'none',  // Hide on extra-small screens (mobile)
+          sm: 'block'  // Show on small screens and up
+        },
+        position: 'relative',
+        zIndex: 2
+      }}
     >
-      {items.map((item, index) => (
-        <Box
-          key={index}
-          component="img"
-          src={item.src}
-          alt={item.alt}
-          sx={{ 
-            width: '100%', 
-            height: '100vh', 
-            objectFit: 'cover',
-            objectPosition: item.position  // Use a posição específica para cada imagem
-          }}
-        />
-      ))}
-    </Carousel>
+      <Carousel
+        className="carrossel"
+        interval={3000}
+        indicators={false}
+        navButtonsAlwaysVisible={true}
+        animation="fade"
+      >
+        {items.map((item, index) => (
+          <Box
+            key={index}
+            component="img"
+            src={item.src}
+            alt={item.alt}
+            sx={{ 
+              width: '100%', 
+              height: '100vh', 
+              objectFit: 'cover',
+              objectPosition: item.position  // Use a posição específica para cada imagem
+            }}
+          />
+        ))}
+      </Carousel>
+    </Box>
   );
 }
 
