@@ -19,6 +19,7 @@ const Presentation = () => {
         fontFamily: 'Poppins, sans-serif',
         marginTop: '30px',
         paddingBottom: '30px', // Padding for mobile
+        height: isSmallScreen ? '600px' : 'inherit',
       }}
     >
       <Box
