@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, Typography, Link, IconButton, Stack } from '@mui/material';
+import { Box, Container, Grid, Typography, Link, IconButton, Stack,useMediaQuery, useTheme } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -7,8 +7,19 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import GridImage from './Grid-image.jsx';
 
 const Footer = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+  
+
   return (
-    <Box sx={{ backgroundColor: '#F2F1E4', py: 6, borderTop: 'solid 1px', height: '70vh' }}>
+    <Box sx={{
+      backgroundColor: '#F2F1E4',
+       py: 6, 
+       borderTop: 'solid 1px', 
+       height: '70vh', 
+       marginTop: isSmallScreen ? '100px' : 'inherit',
+       alignItems: isSmallScreen ? 'center' : 'inherit', 
+       }}>
       <Container maxWidth="xl" sx={{ px: 0 }}>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4} md={3} lg={3}>
@@ -21,12 +32,27 @@ const Footer = () => {
 
             <Typography
               variant="body1"
-              sx={{ fontSize: '14px', letterSpacing: 0, fontFamily: 'Poppins, sans-serif', marginLeft: '30px', lineHeight: 'px' }}
+              sx={{ fontSize: '14px', 
+                letterSpacing: 0, 
+                fontFamily: 'Poppins, sans-serif', 
+                marginLeft: '30px', 
+                lineHeight: 'px',
+                marginLeft: isSmallScreen ? '0px' : 'inherit',
+                textAlign: isSmallScreen ? 'center' : 'inherit'
+              }}
             >
               Utilizamos técnicas inovadoras para produzir estampas vibrantes e cheias de personalidade. Seja para uma coleção
               completa ou uma peça única.
             </Typography>
-            <Stack direction="row" spacing={2} sx={{ mt: 2, marginLeft: '20px' }}>
+            <Stack direction="row" spacing={2} sx={{ 
+              mt: 2, 
+              marginLeft: '20px',
+              
+            '@media (max-width: 480px)': {
+    
+              marginLeft:'110px'
+            
+               },}}>
               <IconButton href="#" aria-label="Instagram">
                 <InstagramIcon />
               </IconButton>
@@ -41,8 +67,27 @@ const Footer = () => {
               </IconButton>
             </Stack>
           </Grid>
-          <Grid item xs={8} sm={4} md={3}>
-            <Stack sx={{ gap: '15px', fontFamily: 'Poppins, sans-serif', color: 'black', marginTop: '40px', marginLeft: '130px' }}>
+          <Grid item xs={7} sm={4} md={3}
+          sx={{
+            
+            '@media (max-width: 480px)': {
+                textAlign:'center',
+                marginLeft:'-80px',
+                marginTop:'0px',
+                
+                
+            
+                 },
+          }}
+          >
+            <Stack sx={{ 
+              gap: '15px', 
+              fontFamily: 'Poppins, sans-serif', 
+              color: 'black', 
+              marginTop: '40px', 
+              marginLeft: '130px',
+              
+               }}>
               <Grid container spacing={0}>
                 <Grid item xs={8}>
                   <Link href="#" underline="none">
@@ -61,7 +106,7 @@ const Footer = () => {
                     </Typography>
                   </Link>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={10}>
                   <Link href="#" underline="none">
                     <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
                       CONTACT
@@ -126,6 +171,12 @@ const Footer = () => {
                 paddingRight: 15,
                 width: 10,
                 fontSize: 15,
+
+                '@media (max-width: 480px)': {
+                  textAlign:'center',
+                  marginLeft:'-200px',
+                 
+                   },
               }}
             >
               &copy; 2024 Rapó Creative

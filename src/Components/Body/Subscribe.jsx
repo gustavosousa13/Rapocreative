@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -5,8 +6,23 @@ import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 
 export default function Subscribe() {
+  
   return (
-    <Box sx={{ borderTop: 'solid 1px', flexDirection: 'row', height: '65vh', marginLeft: '50px', marginRight: '50px', fontFamily: 'Poppins, sans-serif', position: 'relative' }}>
+    <Box sx={{ borderTop: 'solid 1px',
+     flexDirection: 'row', 
+     height: '65vh',
+      marginLeft: '50px', 
+      marginRight: '50px', 
+      fontFamily: 'Poppins, sans-serif',
+       position: 'relative',
+       '@media (max-width: 480px)': {
+         height:'80vh'
+          },
+          '@media (max-width: 850px)': {
+          height:'50vh', 
+          },
+    
+       }}>
     
       <Box
         component="img"
@@ -20,18 +36,16 @@ export default function Subscribe() {
           width: '750px',
           marginLeft: '-70px',
           zIndex: 1,
-          // Ajustes responsivos
+         
           '@media (max-width: 1200px)': {
             height: '250px',
             width: '250px',
           },
-          '@media (max-width: 768px)': {
-            height: '200px',
-            width: '200px',
+          '@media (max-width: 850px)': {
+           display:'none'
           },
           '@media (max-width: 480px)': {
-            height: '150px',
-            width: '150px',
+            display:'none'
           },
         }}
       />
@@ -39,24 +53,61 @@ export default function Subscribe() {
         sx={{
           position: 'relative',
           width: '50%',
-          display: 'flex',
-          flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'flex-start',
-          paddingLeft: '190px',
+          paddingLeft: '220px',
           paddingTop: '50px',
           zIndex: 2,
+          '@media (max-width: 850px)': {
+            marginLeft:'-20px',
+            paddingTop: '40px',
+            width:'100%'
+           },
         }}
       >
         <Typography
           variant="h4"
-          sx={{ textAlign: 'left', marginBottom: '20px', marginRight: '0px', marginLeft: '0px', fontFamily: 'Poppins', fontWeight:'bold', fontSize:'44px' }}
+          sx={{ textAlign: 'left', 
+            marginBottom: '20px', 
+            marginRight: '0px',
+             marginLeft: '0px', 
+             fontFamily: 'Poppins', 
+             fontWeight:'bold', 
+             fontSize:'38px',
+             
+             '@media (max-width: 1200px)': {
+             
+            },
+            '@media (max-width: 850px)': {
+             marginLeft:'-200px'
+            },
+            '@media (max-width: 480px)': {
+              marginLeft:'-230px',
+              marginTop:'-5px',
+              fontSize:'34px'
+            },
+            
+            }}
         >
             Fale com a gente!
         </Typography>
         <Typography
           variant="body1"
-          sx={{ textAlign: 'left', marginRight: '-20pxpx', marginLeft: '0px', fontFamily: 'Poppins' }}
+          sx={{ textAlign: 'left',
+             marginRight: '-20px', 
+             marginLeft: '0px', 
+             fontFamily: 'Poppins',
+             fontSize:'15px',
+             '@media (max-width: 1200px)': {
+             
+             },
+             '@media (max-width: 850px)': {
+              marginLeft:'-200px',
+              fontSize:'24px'
+             },
+             '@media (max-width: 480px)': {
+               display:'none'
+             },
+             }}
         >
           Deixe aqui sua mensagem. Além de nos contatar, você receberá notificações de lançamentos.
         </Typography>
@@ -72,13 +123,31 @@ export default function Subscribe() {
           flexDirection: 'column',
           height: '350px',
           zIndex: 2,
+          '@media (max-width: 1200px)': {
+             
+             },
+             '@media (max-width: 850px)': {
+              marginLeft:'-700px',
+              paddingTop: '230px'
+             },
+             '@media (max-width: 480px)': {
+               marginLeft:'-730px',
+               paddingTop:'80px',
+              
+             },
         }}
         noValidate
         autoComplete="off"
       >
-        <Box sx={{ marginRight: '-100px' }}>
-          <Grid container spacing={2}>
-            <Grid item xs={8} sm={6}>
+        <Box sx={{ marginRight: '-120px' }}>
+          <Grid container spacing={1}>
+            <Grid item xs={12} sm={6}
+             sx={{
+              '@media (max-width: 480px)': {
+               marginRight:'530px',
+                          
+             },
+            }} >
               <TextField
                 id="outlined-multiline-flexible"
                 label="Nome completo"
@@ -86,7 +155,12 @@ export default function Subscribe() {
                 fullWidth
               />
             </Grid>
-            <Grid item xs={8} sm={4}>
+            <Grid item xs={12} sm={4}
+            sx={{
+              '@media (max-width: 480px)': {
+               marginRight:'530px',
+                                       },
+            }}>
               <TextField
                 id="outlined-textarea"
                 label="Telefone"
@@ -94,7 +168,14 @@ export default function Subscribe() {
                 fullWidth
               />
             </Grid>
-            <Grid item xs={6} sm={10}>
+            <Grid item xs={12} sm={10}
+            sx={{
+              '@media (max-width: 480px)': {
+               marginRight:'530px',
+                          
+             },
+            }}
+            >
               <TextField
                 id="outlined-textarea"
                 label="Email"
@@ -102,13 +183,13 @@ export default function Subscribe() {
                 fullWidth
               />
             </Grid>
-            <Grid item xs={12} sm={10}>
+            <Grid item xs={4.59} sm={10}>
               <TextField
                 id="outlined-multiline-static"
                 label="Digite sua mensagem"
                 placeholder="Deixe aqui seu recado, que entraremos em contato!"
                 multiline
-                rows={6}
+                rows={3}
                 fullWidth
               />
             </Grid>
