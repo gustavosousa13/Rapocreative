@@ -4,7 +4,7 @@ import { styled } from '@mui/system';
 
 const ParallaxContainer = styled(Box)({
   position: 'relative',
-  height: '900px',
+  height: '70vh',
   width: '100vw',
   overflow: 'hidden',
   display: 'flex',
@@ -19,8 +19,8 @@ const ParallaxImage = styled(Box)({
   top: 0,
   left: 0,
   width: '100%',
-  height: '900px',
-  backgroundImage: 'url("assets/RapoCreativeEstamparia2.jpg")',
+  height: '70vh',
+  backgroundImage: `url('./assets/RapoCreativeEstamparia2.jpg')`,
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
   backgroundPosition: 'center',
@@ -40,7 +40,7 @@ const SubText = styled(Typography)({
   fontSize: '24px',
   textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
   zIndex: 1,
-  marginBottom: '20px', 
+  marginBottom: '20px',
 });
 
 const StyledButton = styled(Button)({
@@ -59,8 +59,12 @@ const ParallaxComponent = () => {
   return (
     <ParallaxContainer>
       <ParallaxImage />
-      <Title sx={{fontFamily:'poppins'}} variant="h1">RAPÓ CREATIVE</Title>
-      <SubText sx={{fontFamily:'poppins'}} variant="h6">Descubra o mundo de cores e formas inspiradoras</SubText>
+      <Title sx={{ fontFamily: 'poppins' }} variant="h1">
+        RAPÓ CREATIVE
+      </Title>
+      <SubText sx={{ fontFamily: 'poppins' }} variant="h6">
+        Descubra o mundo de cores e formas inspiradoras
+      </SubText>
       <StyledButton>Saiba Mais</StyledButton>
     </ParallaxContainer>
   );

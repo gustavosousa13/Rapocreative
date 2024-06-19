@@ -15,7 +15,7 @@ const AnimatedImages = () => {
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
-        borderTop:'solid 1px',
+        borderTop: 'solid 1px',
         borderBottom: 'solid 1px'
       }}
     >
@@ -23,7 +23,7 @@ const AnimatedImages = () => {
         sx={{
           display: 'flex',
           animation: 'slideRight 20s linear infinite',
-          width: '200%', // Duplicando o conjunto de imagens
+          width: '200%', // Duplicating the set of images
         }}
       >
         {[...images, ...images].map((image, index) => (
@@ -35,8 +35,8 @@ const AnimatedImages = () => {
             sx={{
               height: '50px',
               objectFit: 'contain',
-              flexShrink: 0, // Impede que as imagens encolham
-              mx: 1, // Margem horizontal entre as imagens
+              flexShrink: 0, // Prevent images from shrinking
+              mx: 1, // Horizontal margin between images
             }}
           />
         ))}
@@ -49,7 +49,7 @@ const AnimatedImages = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-30%); // Move metade do conjunto (já que é duplicado)
+            transform: translateX(-30%); // Move half of the set (since it's duplicated)
           }
         }
         `}

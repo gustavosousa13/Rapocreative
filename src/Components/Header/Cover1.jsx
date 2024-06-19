@@ -4,16 +4,7 @@ import { Box } from '@mui/material';
 
 function Cover() {
   const items = [
-    {
-      src: "assets/RapoSlide.jpg",
-      alt: "First slide",
-      position: 'left center'
-    },
-    {
-      src: "assets/Banner_Gardenia-C.jpg",
-      alt: "Second slide",
-      position: 'right' 
-    },
+ 
     {
       src: "assets/BannerGardenia.jpg",
       alt: "Third slide",
@@ -22,7 +13,7 @@ function Cover() {
     {
       src: "assets/BannerTempero.jpg",
       alt: "Fourth slide",
-      position: 'right'  // Ajuste a posição conforme necessário
+      position: 'right'  
     }
   ];
 
@@ -30,11 +21,12 @@ function Cover() {
     <Box
       sx={{
         display: {
-          xs: 'none',  // Hide on extra-small screens (mobile)
-          sm: 'block'  // Show on small screens and up
+          xs: 'none', 
+          sm: 'block' 
         },
         position: 'relative',
-        zIndex: 2
+        zIndex: 2,
+       
       }}
     >
       <Carousel
@@ -54,7 +46,20 @@ function Cover() {
               width: '100%', 
               height: '100vh', 
               objectFit: 'cover',
-              objectPosition: item.position  // Use a posição específica para cada imagem
+              objectPosition: item.position,
+
+              '@media (max-width: 1100px)': {
+                height:'800px',
+                width:'auto',
+                marginLeft:'-800px'
+              },
+              '@media (max-width:900px)': {
+                height:'500px',
+                width:'auto',
+                marginLeft:'-370px'
+              },
+             
+             
             }}
           />
         ))}
