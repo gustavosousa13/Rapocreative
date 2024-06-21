@@ -20,7 +20,7 @@ export default function Subscribe() {
           height: '40vh',
         },
         '@media (max-width:1680px)': {
-          height: '60vh',
+          height: '70vh',
         },
         '@media (max-width: 1024px)': {
           height: '60vh',
