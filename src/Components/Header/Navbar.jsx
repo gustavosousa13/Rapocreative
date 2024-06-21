@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { HashLink as ScrollLink } from 'react-router-hash-link';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Presentation', 'Subscribe'];
+const navItems = ['Início', 'Serviços', 'Quem somos', 'Portfólio', 'Contato'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -29,8 +29,8 @@ function DrawerAppBar(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }} onClick={() => handleClick(item)}>
-              <ScrollLink smooth to={`#${item.toLowerCase()}`} duration={500}> 
-                <ListItemText primary={item} />
+              <ScrollLink smooth to={`#${item.toLowerCase().replace(/ /g, '-')}`} duration={500} style={{ textDecoration: 'none', color: 'black' }}>
+                <ListItemText primary={item} primaryTypographyProps={{ fontSize: '18px', color: 'black' }} />
               </ScrollLink>
             </ListItemButton>
           </ListItem>
@@ -47,11 +47,15 @@ function DrawerAppBar(props) {
       <AppBar
         component="nav"
         sx={{
-          backgroundColor: '#F2F1E4',
-          height: { xs: 'auto', sm: '90px' },
+          backgroundColor: 'rgba(242, 241, 228, 0.7)',
+          backdropFilter: 'blur(10px)',
+          height: { xs: 'auto', sm: '60px' },
           boxShadow: 'none',
           padding: 0,
-          borderBottom: '1px solid black',
+          borderBottom: 'none',
+          position: 'fixed',
+          width: '100%',
+          zIndex: 1000,
         }}
       >
         <Toolbar sx={{ justifyContent: 'space-between', padding: 0 }}>
@@ -70,10 +74,10 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: 'black' }} onClick={() => handleClick(item)}>
-                <ScrollLink smooth to={`#${item.toLowerCase()}`} duration={500}>
+              <Button key={item} sx={{ color: 'black', fontSize: '15px', fontWeight: 'bold', paddingLeft: '0px', marginRight: '50px' }} onClick={() => handleClick(item)}>
+                <ScrollLink smooth to={`#${item.toLowerCase().replace(/ /g, '-')}`} duration={500} style={{ textDecoration: 'none', color: 'black' }}>
                   {item}
                 </ScrollLink>
               </Button>

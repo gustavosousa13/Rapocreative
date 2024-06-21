@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, Typography, Link, IconButton, Stack, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Container, Grid, Typography, Link, IconButton, Stack, useTheme } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -8,7 +8,6 @@ import GridImage from './Grid-image';
 
 const Footer = () => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <Box
@@ -16,15 +15,14 @@ const Footer = () => {
         backgroundColor: '#F2F1E4',
         py: 6,
         borderTop: 'solid 1px',
-        height: '70vh',
-        marginTop: isSmallScreen ? '100px' : 'inherit',
-        alignItems: isSmallScreen ? 'center' : 'inherit',
+        height: '80vh',
+        marginTop: { xs: '100px', md: 'inherit' },
+        alignItems: { xs: 'center', md: 'inherit' },
       }}
     >
       <Container maxWidth="xl" sx={{ px: 0 }}>
-        <Grid container spacing={5}>
-          {/* Grid item 1 */}
-          <Grid item xs={12} sm={4} md={3} lg={3}>
+        <Grid container spacing={5} justifyContent="center">
+          <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
             <Box
               component="img"
               src="assets/logo-rapo.png"
@@ -32,8 +30,8 @@ const Footer = () => {
               sx={{
                 width: '270px',
                 height: 'auto',
-                marginLeft: { xs: 7, sm: 1 }, // Ajuste para diferentes tamanhos de tela
-                textAlign: isSmallScreen ? 'center' : 'inherit',
+                margin: { xs: '0 auto', md: '0' },
+                display: { xs: 'block', md: 'inline-block' }
               }}
             />
 
@@ -43,13 +41,14 @@ const Footer = () => {
                 fontSize: '14px',
                 letterSpacing: 0,
                 fontFamily: 'Poppins, sans-serif',
-                marginLeft: isSmallScreen ? '0px' : '30px',
-                textAlign: isSmallScreen ? 'center' : 'inherit',
+                marginLeft: { xs: '0px', md: '0' },
+                textAlign: { xs: 'center', md: 'left' },
+                mt: { xs: 2, md: 0 }
               }}
             >
               Utilizamos técnicas inovadoras para produzir estampas vibrantes e cheias de personalidade. Seja para uma coleção completa ou uma peça única.
             </Typography>
-            <Stack direction="row" spacing={2} sx={{ mt: 2, marginLeft: '20px' }}>
+            <Stack direction="row" spacing={2} sx={{ mt: 2, justifyContent: { xs: 'center', md: 'left' } }}>
               <IconButton href="#" aria-label="Instagram">
                 <InstagramIcon />
               </IconButton>
@@ -65,41 +64,38 @@ const Footer = () => {
             </Stack>
           </Grid>
 
-          {/* Grid item 2 */}
-          <Grid item xs={12} sm={4} md={3} sx={{ textAlign: isSmallScreen ? 'center' : 'inherit' }}>
-            <Stack sx={{ gap: '15px', fontFamily: 'Poppins, sans-serif', color: 'black', marginTop: '40px' }}>
-              <Grid container spacing={0}>
-                <Grid item xs={8}>
+          <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Stack sx={{ gap: '15px', fontFamily: 'Poppins, sans-serif', color: 'black', marginTop: { xs: '20px', sm: '40px' } }}>
+              <Grid container spacing={0} justifyContent="center">
+                <Grid item xs={12} sm={12} md={12}>
                   <Link href="#" underline="none">
                     <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      HOME
+                      INÍCIO
                     </Typography>
                   </Link>
                   <Link href="#" underline="none">
                     <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      SERVICES
+                      SERVIÇOS
                     </Typography>
                   </Link>
                   <Link href="#" underline="none">
                     <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      ABOUT
-                    </Typography>
-                  </Link>
-                </Grid>
-                <Grid item xs={10}>
-                  <Link href="#" underline="none">
-                    <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      CONTACT
+                      QUEM SOMOS
                     </Typography>
                   </Link>
                   <Link href="#" underline="none">
                     <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      BLOG
+                      PORTIFÓLIO
                     </Typography>
                   </Link>
                   <Link href="#" underline="none">
                     <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      PROGRAM
+                      CONTATO
+                    </Typography>
+                  </Link>
+                  <Link href="#" underline="none">
+                    <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
+                      ESTAMPAS
                     </Typography>
                   </Link>
                 </Grid>
@@ -107,22 +103,22 @@ const Footer = () => {
             </Stack>
           </Grid>
 
-          {/* Grid item 3 */}
-          <Grid item xs={12} sm={4} md={6}>
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', marginRight: '-250px' }}>
+          <Grid item xs={12} sm={4} md={6} lg={6} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, alignItems: 'center', height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', md: 'auto' }, textAlign: 'center', pr: { md: 4, lg: 6 } }}>
               <GridImage />
             </Box>
           </Grid>
         </Grid>
 
-        {/* Footer bottom */}
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: { xs: 'column', sm: 'row' },
             alignItems: 'center',
+            justifyContent: { xs: 'center', sm: 'space-between' },
             width: '100%',
             padding: '10px 0px',
+            mt: { xs: 4, sm: 0 }
           }}
         >
           <Box
@@ -130,41 +126,34 @@ const Footer = () => {
             sx={{
               width: 450,
               height: 80,
-              marginLeft: -8,
               display: { xs: 'none', sm: 'block' },
+              mb: { xs: 2, sm: 0 }
             }}
             alt="Imagem rodape"
             src="assets/rodape2.png"
           />
-          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-            <Typography
-              variant="body3"
-              textAlign="center"
-              sx={{
-                letterSpacing: 1,
-                fontFamily: 'Poppins, sans-serif',
-                whiteSpace: 'nowrap',
-                paddingLeft: 15,
-                paddingRight: 15,
-                width: 10,
-                fontSize: 15,
-                '@media (max-width: 480px)': {
-                  textAlign: 'center',
-                  marginLeft: '-200px',
-                },
-              }}
-            >
-              &copy; 2024 Rapó Creative
-            </Typography>
-          </Box>
+          <Typography
+            variant="body3"
+            sx={{
+              letterSpacing: 1,
+              fontFamily: 'Poppins, sans-serif',
+              textAlign: 'center',
+              paddingLeft: 15,
+              paddingRight: 15,
+              fontSize: 15,
+              mb: { xs: 2, sm: 0 },
+              mt: { xs: 2, sm: 0 }
+            }}
+          >
+            &copy; 2024 Rapó Creative
+          </Typography>
           <Box
             component="img"
             sx={{
               width: 450,
               height: 80,
-              marginLeft: 30,
-              marginRight: 0,
               display: { xs: 'none', sm: 'block' },
+              mb: { xs: 2, sm: 0 }
             }}
             alt="Imagem rodape"
             src="assets/rodape1.png"

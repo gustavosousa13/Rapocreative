@@ -2,16 +2,22 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Box } from '@mui/material';
 
+
 function Cover() {
   const items = [
  
     {
-      src: "assets/BannerGardenia.jpg",
+      src: "assets/banner-gu1.jpg",
       alt: "Third slide",
       position: 'right center' 
     },
     {
-      src: "assets/BannerTempero.jpg",
+      src: "assets/banner-gu2.jpg",
+      alt: "Fourth slide",
+      position: 'right'  
+    },
+    {
+      src: "assets/banner-gu3.jpg",
       alt: "Fourth slide",
       position: 'right'  
     }

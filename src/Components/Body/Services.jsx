@@ -4,13 +4,13 @@ import Slider from 'react-slick';
 
 const services = [
   {
-    image: 'assets/banner5.jpg',
+    image: 'assets/imagem1.jpg',
   },
   {
-    image: 'assets/inspiramais09.jpg',
+    image: 'assets/imagem2.jpg',
   },
   {
-    image: 'assets/referencia1.jpg',
+    image: 'assets/imag3.jpg',
   },
 ];
 
@@ -36,6 +36,7 @@ const ServicesSection = () => {
         width: '100vw',
         margin: '0 auto',
         boxSizing: 'border-box',
+        marginTop:'-6px'
       }}
     >
       <Box
@@ -51,15 +52,16 @@ const ServicesSection = () => {
           sx={{
             borderBottom: '1px solid black',
             width: '100%',
+
             '@media (max-width: 480px)': {
               borderBottom: 'none',
             },
           }}
         />
-        <Typography variant="h4" sx={{ margin: '10px 0', fontFamily: 'Poppins' }}>
-          Nossos Serviços
+        <Typography variant="h4" sx={{ margin: '10px 0', fontFamily: 'Poppins', fontWeight:'bold' }}>
+          Nossos serviços
         </Typography>
-        <Box sx={{ borderBottom: '1px solid black', width: '100%' }} />
+        <Box sx={{ width: '100%', }} />
       </Box>
       {isSmallScreen ? (
         <Slider {...sliderSettings}>
@@ -79,6 +81,7 @@ const ServicesSection = () => {
                 padding: '0px',
                 background: `url(${service.image}) no-repeat center center`,
                 backgroundSize: 'cover',
+                
               }}
             >
               <Box
@@ -95,7 +98,7 @@ const ServicesSection = () => {
           ))}
         </Slider>
       ) : (
-        <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', overflowX: 'auto' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', overflowX: 'auto', marginTop:'-19px' }}>
           {services.map((service, index) => (
             <Box
               key={index}
@@ -111,6 +114,7 @@ const ServicesSection = () => {
                 padding: '20px',
                 background: `url(${service.image}) no-repeat center center`,
                 backgroundSize: 'cover',
+              
               }}
             >
               <Box

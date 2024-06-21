@@ -15,16 +15,20 @@ function App() {
     <Router>
       <Box style={{ overflowX: 'hidden' }}>
         <DrawerAppBar />
-        <div id="home">
+        <div id="início">
           <Cover />
         </div>
+        <div id="serviços">
         <Services />
-        <div id="presentation">
+        </div>
+        <div id="quem-somos">
           <Presentation />
         </div>
         <AnimatedImages />
-        <ParallaxComponent />   
-        <div id="subscribe">
+        <div id="portfólio">
+        <ParallaxComponent /> 
+        </div>  
+        <div id="contato">
           <Subscribe />
         </div>
         <Footer />

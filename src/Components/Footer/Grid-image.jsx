@@ -13,7 +13,10 @@ export default function GridImage() {
 
       marginLeft:'-200px',
       marginTop:'0px'
-       },    
+       },
+
+    '@media (max-width:880px )':{
+    display:'none'},   
     }} cols={3}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>

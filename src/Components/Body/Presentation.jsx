@@ -1,76 +1,125 @@
 import React from 'react';
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
 
 const Presentation = () => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
-  const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <Box
       sx={{
-        height: isSmallScreen ? '600px' : '60vh',
+        height: {
+          xs: '600px', // small screens
+          md: '65vh',  // medium and larger screens
+        },
         width: '100%',
         display: 'flex',
-        flexDirection: isSmallScreen ? 'column' : 'row',
+        flexDirection: {
+          xs: 'column', // small screens
+          md: 'row',    // medium and larger screens
+        },
         alignItems: 'center',
         justifyContent: 'center',
         borderTop: '1px solid black',
-        borderTop: isLargeScreen ? 'none' : 'inherit',
         fontFamily: 'Poppins, sans-serif',
-        marginTop: '30px',
+        marginTop: '8px',
         paddingBottom: '30px',
+       
       }}
     >
       <Box
         sx={{
-          width: isSmallScreen ? '100%' : isLargeScreen ? '50%' : '650px',
+          width: {
+            xs: '100%', // small screens
+            lg: '50%',  // large screens
+            md: '650px' // medium screens
+          },
           display: 'flex',
-          justifyContent: isSmallScreen ? 'center' : 'flex-start',
+          justifyContent: {
+            xs: 'center',   // small screens
+            md: 'flex-start'// medium and larger screens
+          },
           alignItems: 'center',
         }}
       >
-        {!isSmallScreen && (
-          <Box
-            component="img"
-            src="assets/inspiramais08.jpg"
-            alt="Inspirational Image"
-            sx={{
-              width: isSmallScreen ? '100%' : isLargeScreen ? '650px' : 'auto',
-              height: isSmallScreen ? 'auto' : isLargeScreen ? '59vh' : 'auto',
-              objectFit: 'cover',
-              marginTop: '28px',
-              '@media (max-width: 1600px)': {
-                height: '500px',
-                width: 'auto',
-                marginLeft: '0px',
-              },
-            }}
-          />
-        )}
+        <Box
+          component="img"
+          src="assets/inspiramais08.jpg"
+          alt="Inspirational Image"
+          sx={{
+            display: {
+              xs: 'none',   // hide on small screens
+              md: 'block',  // show on medium and larger screens
+            },
+            width: {
+              xs: '100%',  // small screens
+              lg: '650px'  // large screens
+            },
+            height: {
+              xs: 'auto',
+              lg: '59vh'   // large screens
+            },
+            marginLeft: {
+              xs:'0px',
+              md: '-60px',
+              lg:'-60px'
+            },
+            objectFit: 'cover',
+            marginTop: '28px',
+
+            
+          }}
+        />
       </Box>
 
       <Box
         sx={{
-          width: isSmallScreen ? '100%' : isLargeScreen ? '50%' : '50%',
+          width: {
+            xs: '100%', // small screens
+            lg: '50%',  // large screens
+            md: '50%'   // medium screens
+          },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: isSmallScreen ? 'center' : 'flex-start',
-          paddingLeft: isSmallScreen ? '20px' : '30px',
-          marginTop: isSmallScreen ? '-20px' : '0px',
-          zIndex: 2, // Mantido o zIndex original
+          alignItems: {
+            xs: 'center',   // small screens
+            md: 'flex-start'// medium and larger screens
+          },
+          paddingLeft: {
+            xs: '20px',  // small screens
+            md: '30px',  // medium and larger screens
+          },
+          marginTop: {
+            xs: '-20px', // small screens
+            md: '0px',   // medium and larger screens
+          },
+          zIndex: 2,
+          '@media (max-width: 1600px)': {
+            marginLeft: '-100px',
+          },
         }}
       >
         <Typography
           variant="h4"
           sx={{
-            textAlign: isSmallScreen ? 'center' : 'left',
+            textAlign: {
+              xs: 'center', // small screens
+              md: 'left',   // medium and larger screens
+            },
             marginBottom: '20px',
-            marginRight: isSmallScreen ? '20px' : '30px',
+            marginLeft: {
+              xs: '60px', // small screens
+              md: '30px', // medium and larger screens
+            },
             fontFamily: 'Poppins',
-            fontWeight: isSmallScreen ? 'bold' : 'inherit',
-            color: isSmallScreen ? 'black' : 'inherit',
+            fontWeight: {
+              xs: 'bold',  // small screens
+              md: 'inherit'// medium and larger screens
+            },
+            color: {
+              xs: 'black', // small screens
+              md: 'inherit'// medium and larger screens
+            },
           }}
         >
           Quem somos
@@ -78,11 +127,25 @@ const Presentation = () => {
         <Typography
           variant="body1"
           sx={{
-            marginRight: isSmallScreen ? '20px' : '30px',
-            textAlign: isSmallScreen ? 'center' : 'inherit',
+            marginLeft: {
+              xs: '60px', // small screens
+              md: '30px', // medium and larger screens
+            },
+            textAlign: {
+              xs: 'center', // small screens
+              md: 'inherit' // medium and larger screens
+            },
             lineHeight: 1.3,
             fontFamily: 'Poppins',
-            color: isSmallScreen ? 'black' : 'inherit',
+            color: {
+              xs: 'black', // small screens
+              md: 'inherit'// medium and larger screens
+            },
+            fontSize: {
+              xs:'16px',
+              lg:'20px',
+              md:'16px'
+            },
           }}
         >
           Bem-vindo ao Rapó Creative! Somos um estúdio especializado na criação de estampas exclusivas para o mercado têxtil, trazendo toda a exuberância e a rica diversidade cultural do Brasil para cada peça. No Rapó Creative, nossa paixão por design se reflete em estampas vibrantes e únicas, que capturam a essência da brasilidade. Além de nossa coleção exclusiva, também oferecemos serviços de criação de estampas sob demanda, adaptando nossas criações ao seu estilo e necessidade. Venha descobrir um mundo de cores e formas inspiradoras conosco!

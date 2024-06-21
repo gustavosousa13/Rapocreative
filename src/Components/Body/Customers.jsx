@@ -23,7 +23,7 @@ const AnimatedImages = () => {
         sx={{
           display: 'flex',
           animation: 'slideRight 20s linear infinite',
-          width: '200%', // Duplicating the set of images
+          width: '200%',
         }}
       >
         {[...images, ...images].map((image, index) => (
@@ -35,8 +35,8 @@ const AnimatedImages = () => {
             sx={{
               height: '50px',
               objectFit: 'contain',
-              flexShrink: 0, // Prevent images from shrinking
-              mx: 1, // Horizontal margin between images
+              flexShrink: 0,
+              mx: 1,
             }}
           />
         ))}
@@ -49,7 +49,7 @@ const AnimatedImages = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-30%); // Move half of the set (since it's duplicated)
+            transform: translateX(-30%);
           }
         }
         `}
