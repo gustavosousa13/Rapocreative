@@ -8,117 +8,136 @@ const Presentation = () => {
     <Box
       sx={{
         height: {
-          xs: '600px', // small screens
-          md: '65vh',  // medium and larger screens
+          xs: '600px',
+          md: '65vh',
         },
         width: '100%',
         display: 'flex',
         flexDirection: {
-          xs: 'column', // small screens
-          md: 'row',    // medium and larger screens
+          xs: 'column',
+          md: 'row',
         },
         alignItems: 'center',
         justifyContent: 'center',
         borderTop: '1px solid black',
         fontFamily: 'Poppins, sans-serif',
-        marginTop: '8px',
-        paddingBottom: '30px',
-       
+        marginTop: '1px',
+        marginBottom: '0px',
+        paddingBottom: '0px',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
       <Box
         sx={{
           width: {
-            xs: '100%', // small screens
-            lg: '50%',  // large screens
-            md: '650px' // medium screens
+            xs: '100%',
+            lg: '100%',
+            md: '100%',
           },
           display: 'flex',
           justifyContent: {
-            xs: 'center',   // small screens
-            md: 'flex-start'// medium and larger screens
+            xs: 'center',
+            md: 'flex-start',
           },
           alignItems: 'center',
+          height: '100%',
         }}
       >
         <Box
           component="img"
-          src="assets/inspiramais08.jpg"
+          src="assets/foto-quemsomos.jpg"
           alt="Inspirational Image"
           sx={{
             display: {
-              xs: 'none',   // hide on small screens
-              md: 'block',  // show on medium and larger screens
+              xs: 'none',
+              md: 'block',
             },
-            width: {
-              xs: '100%',  // small screens
-              lg: '650px'  // large screens
-            },
-            height: {
-              xs: 'auto',
-              lg: '59vh'   // large screens
-            },
+            height: '100%',
+            width: 'auto',
             marginLeft: {
-              xs:'0px',
-              md: '-60px',
-              lg:'-60px'
+              xs: '0px',
+              md: '-200px',
+              lg: '0px',
+              xl: '0px',
             },
             objectFit: 'cover',
-            marginTop: '28px',
-
-            
+            marginTop: '10px',
+            marginBottom: '10px',
           }}
         />
       </Box>
 
       <Box
         sx={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          height: '100%',
+          width: '50%',
+          backgroundColor: {
+            xs: 'transparent',
+            md: 'rgba(255, 255, 255, 0.6)',
+          },
+          backdropFilter: {
+            xs: 'none',
+            md: 'blur(10px)',
+          },
+          zIndex: 1,
+        }}
+      />
+
+      <Box
+        sx={{
           width: {
-            xs: '100%', // small screens
-            lg: '50%',  // large screens
-            md: '50%'   // medium screens
+            xs: '100%',
+            lg: '50%',
+            md: '50%',
           },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: {
-            xs: 'center',   // small screens
-            md: 'flex-start'// medium and larger screens
+            xs: 'center',
+            md: 'flex-start',
           },
           paddingLeft: {
-            xs: '20px',  // small screens
-            md: '30px',  // medium and larger screens
+            xs: '30px', // Increased padding
+            md: '-130px', // Increased padding
+            lg: '-200px',
+          },
+          paddingRight: {
+            xs: '30px', // Added padding for the right side
+            md: '30px', // Added padding for the right side
           },
           marginTop: {
-            xs: '-20px', // small screens
-            md: '0px',   // medium and larger screens
+            xs: '-20px',
+            md: '0px',
           },
           zIndex: 2,
-          '@media (max-width: 1600px)': {
-            marginLeft: '-100px',
+          marginLeft: {
+            md: '-450px',
+            xl: '-700px',
           },
+          marginRight: '50px',
         }}
       >
         <Typography
           variant="h4"
           sx={{
             textAlign: {
-              xs: 'center', // small screens
-              md: 'left',   // medium and larger screens
+              xs: 'center',
+              md: 'left',
             },
             marginBottom: '20px',
-            marginLeft: {
-              xs: '60px', // small screens
-              md: '30px', // medium and larger screens
-            },
             fontFamily: 'Poppins',
             fontWeight: {
-              xs: 'bold',  // small screens
-              md: 'inherit'// medium and larger screens
+              xs: 'bold',
+              md: 'inherit',
             },
             color: {
-              xs: 'black', // small screens
-              md: 'inherit'// medium and larger screens
+              xs: 'black',
+              md: 'inherit',
             },
           }}
         >
@@ -127,24 +146,20 @@ const Presentation = () => {
         <Typography
           variant="body1"
           sx={{
-            marginLeft: {
-              xs: '60px', // small screens
-              md: '30px', // medium and larger screens
-            },
             textAlign: {
-              xs: 'center', // small screens
-              md: 'inherit' // medium and larger screens
+              xs: 'center',
+              md: 'inherit',
             },
             lineHeight: 1.3,
             fontFamily: 'Poppins',
             color: {
-              xs: 'black', // small screens
-              md: 'inherit'// medium and larger screens
+              xs: 'black',
+              md: 'inherit',
             },
             fontSize: {
-              xs:'16px',
-              lg:'20px',
-              md:'16px'
+              xs: '16px',
+              lg: '16px',
+              md: '16px',
             },
           }}
         >

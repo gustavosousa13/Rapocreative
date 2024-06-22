@@ -54,17 +54,6 @@ function Cover() {
               objectFit: 'cover',
               objectPosition: item.position,
 
-              '@media (max-width: 1100px)': {
-                height:'800px',
-                width:'auto',
-                marginLeft:'-800px'
-              },
-              '@media (max-width:900px)': {
-                height:'500px',
-                width:'auto',
-                marginLeft:'-370px'
-              },
-             
              
             }}
           />
