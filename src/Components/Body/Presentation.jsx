@@ -71,17 +71,19 @@ const Presentation = () => {
       <Box
         sx={{
           position: 'absolute',
-          top: 0,
+          top: 3,
           right: 0,
           height: '100%',
           width: '50%',
           backgroundColor: {
             xs: 'transparent',
             md: 'rgba(255, 255, 255, 0.6)',
+            lg:'rgba(255, 255, 255, 0.9)',
           },
           backdropFilter: {
             xs: 'none',
-            md: 'blur(10px)',
+            md: 'blur(20px)',
+            lg: 'blur(10px)'
           },
           zIndex: 1,
         }}
