@@ -8,7 +8,7 @@ const Presentation = () => {
     <Box
       sx={{
         height: {
-          xs: '600px',
+          xs: '700px',
           md: '65vh',
         },
         width: '100%',
@@ -17,12 +17,18 @@ const Presentation = () => {
           xs: 'column',
           md: 'row',
         },
+        marginBottom: {
+        xs:'80px',
+        md: '0px',
+      },
         alignItems: 'center',
         justifyContent: 'center',
-        borderTop: '1px solid black',
+        borderTop: {
+        xs:'none',
+        md:'1px solid black'},
         fontFamily: 'Poppins, sans-serif',
         marginTop: '1px',
-        marginBottom: '0px',
+       
         paddingBottom: '0px',
         position: 'relative',
         overflow: 'hidden',
@@ -104,7 +110,7 @@ const Presentation = () => {
             md: 'flex-start',
           },
           paddingLeft: {
-            xs: '30px', // Increased padding
+            xs: '80px', // Increased padding
             md: '-130px', // Increased padding
             lg: '-200px',
           },
@@ -113,7 +119,7 @@ const Presentation = () => {
             md: '30px', // Added padding for the right side
           },
           marginTop: {
-            xs: '-20px',
+            xs: '-80px',
             md: '0px',
           },
           zIndex: 2,

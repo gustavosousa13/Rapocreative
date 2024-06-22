@@ -26,7 +26,7 @@ export default function Subscribe() {
           height: '60vh',
         },
         '@media (max-width: 480px)': {
-          height: '60vh',
+          height: '70vh',
         },
       }}
     >
