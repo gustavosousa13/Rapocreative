@@ -25,7 +25,7 @@ const Presentation = () => {
         justifyContent: 'center',
         borderTop: {
         xs:'none',
-        md:'1px solid black'},
+        md:'3px solid black'},
         fontFamily: 'Poppins, sans-serif',
         marginTop: '1px',
        
@@ -77,7 +77,7 @@ const Presentation = () => {
       <Box
         sx={{
           position: 'absolute',
-          top: 3,
+          top: 1,
           right: 0,
           height: '100%',
           width: '50%',

@@ -36,7 +36,7 @@ const ServicesSection = () => {
         width: '100vw',
         margin: '0 auto',
         boxSizing: 'border-box',
-        marginTop:'-6px'
+        marginTop:'-7px'
       }}
     >
       <Box
