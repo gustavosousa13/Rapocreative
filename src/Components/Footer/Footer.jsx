@@ -4,7 +4,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import PinterestIcon from '@mui/icons-material/Pinterest';
-import { Image } from '@mui/icons-material';
 
 const Footer = () => {
   const theme = useTheme();
@@ -21,8 +20,9 @@ const Footer = () => {
       }}
     >
       <Container maxWidth="xl" sx={{ px: 0 }}>
-        <Grid container spacing={5} justifyContent="center">
-          <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+        <Grid container spacing={5} alignItems="flex-start">
+          {/* First Block */}
+          <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: { xs: 'center', md: 'left' }, ml: { xs: '0px', md: '30px' }, alignSelf:{xs:'center'} }}>
             <Box
               component="img"
               src="assets/logo-rapo.png"
@@ -30,8 +30,9 @@ const Footer = () => {
               sx={{
                 width: '270px',
                 height: 'auto',
-                margin: { xs: '0 auto', md: '0' },
-                display: { xs: 'block', md: 'inline-block' }
+                display: { xs: 'block', md: 'inline-block' },
+                mb: { xs: 2, md: 0 },
+              
               }}
             />
 
@@ -41,9 +42,9 @@ const Footer = () => {
                 fontSize: '14px',
                 letterSpacing: 0,
                 fontFamily: 'Poppins, sans-serif',
-                marginLeft: { xs: '0px', md: '0' },
                 textAlign: { xs: 'center', md: 'left' },
-                mt: { xs: 2, md: 0 }
+                mt: { xs: 2, md: 0 },
+                ml: { xs: 0, md: 0 }
               }}
             >
               Utilizamos técnicas inovadoras para produzir estampas vibrantes e cheias de personalidade. Seja para uma coleção completa ou uma peça única.
@@ -55,7 +56,7 @@ const Footer = () => {
               <IconButton href="#" aria-label="YouTube">
                 <YouTubeIcon />
               </IconButton>
-              <IconButton href="#" aria-label="TikTok">
+              <IconButton href="#" aria-label="Facebook">
                 <FacebookIcon />
               </IconButton>
               <IconButton href="#" aria-label="Pinterest">
@@ -63,17 +64,10 @@ const Footer = () => {
               </IconButton>
             </Stack>
           </Grid>
-        <Box sx={{
-          marginLeft: {xs:'40px',md:'300px',lg: '300px' },
-          '@media (min-width: 600px) and (max-width: 810px)': {
-            marginLeft: '200px',
-          },
-          marginTop: {md:'20px'},
-          marginRight:{md:'-50px'}
-          
-        }} >
+
+          {/* Second Block */}
           <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Stack sx={{ gap: '15px', fontFamily: 'Poppins, sans-serif', color: 'black', marginTop: { xs: '20px', sm: '40px' } }}>
+            <Stack sx={{ gap: '15px', fontFamily: 'Poppins, sans-serif', color: 'black', marginTop: { xs: '60px', sm: '40px' }, marginLeft:{sm:'200px'} }}>
               <Grid container spacing={0} justifyContent="center">
                 <Grid item xs={12} sm={12} md={12}>
                   <Link href="#" underline="none">
@@ -110,23 +104,26 @@ const Footer = () => {
               </Grid>
             </Stack>
           </Grid>
-          </Box>
-           <Box 
-           component="img"
-          src="assets/fotos-insta.png"
-          alt="Inspirational Image"
-          sx={{
-            display:{xs:'none', ms:'none', lg:'block'},
-            marginTop:'80px',
-            marginLeft:'150px',
-            height: '250px',
-            width: 'auto',
-           
-          }}
-        />
-            
+
+          {/* Third Block */}
+          <Grid item xs={12} sm={4} md={4} lg={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Box 
+              component="img"
+              src="assets/fotos-insta.png"
+              alt="Inspirational Image"
+              sx={{
+                display: { xs: 'none', ms: 'none', lg: 'block' },
+                height: '250px',
+                width: 'auto',
+                ml: 'auto',
+                mr: { lg: '-300px' }, // 100px more to the right
+                mt: { xs: '0px', lg: '30px' }, // Adjusts vertical centering for large screens
+              }}
+            />
+          </Grid>
         </Grid>
 
+        {/* Footer Bottom Part */}
         <Box
           sx={{
             display: 'flex',
