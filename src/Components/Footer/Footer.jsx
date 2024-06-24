@@ -21,8 +21,8 @@ const Footer = () => {
     >
       <Container maxWidth="xl" sx={{ px: 0 }}>
         <Grid container spacing={5} alignItems="flex-start">
-          {/* First Block */}
-          <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: { xs: 'center', md: 'left' }, ml: { xs: '0px', md: '30px' }, alignSelf:{xs:'center'} }}>
+          {/* First Block inserir espaçamento na imagine em relção ao texto */}
+          <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: { xs: 'center', md: 'left' }, ml: { xs: '0px', md: '30px' } }}>
             <Box
               component="img"
               src="assets/logo-rapo.png"
@@ -116,8 +116,8 @@ const Footer = () => {
                 height: '250px',
                 width: 'auto',
                 ml: 'auto',
-                mr: { lg: '-300px' }, // 100px more to the right
-                mt: { xs: '0px', lg: '30px' }, // Adjusts vertical centering for large screens
+                mr: { lg: '-300px' }, // anteriormente 100px 
+                mt: { xs: '0px', lg: '30px' }, 
               }}
             />
           </Grid>

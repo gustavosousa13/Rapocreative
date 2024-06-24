@@ -18,17 +18,17 @@ const Presentation = () => {
           md: 'row',
         },
         marginBottom: {
-        xs:'80px',
-        md: '0px',
-      },
+          xs: '80px',
+          md: '0px',
+        },
         alignItems: 'center',
         justifyContent: 'center',
         borderTop: {
-        xs:'none',
-        md:'3px solid black'},
+          xs: 'none',
+          md: '3px solid black'
+        },
         fontFamily: 'Poppins, sans-serif',
         marginTop: '1px',
-       
         paddingBottom: '0px',
         position: 'relative',
         overflow: 'hidden',
@@ -84,7 +84,7 @@ const Presentation = () => {
           backgroundColor: {
             xs: 'transparent',
             md: 'rgba(255, 255, 255, 0.6)',
-            lg:'rgba(255, 255, 255, 0.9)',
+            lg: 'rgba(255, 255, 255, 0.9)',
           },
           backdropFilter: {
             xs: 'none',
@@ -110,13 +110,13 @@ const Presentation = () => {
             md: 'flex-start',
           },
           paddingLeft: {
-            xs: '80px', // Increased padding
-            md: '-130px', // Increased padding
+            xs: '80px',
+            md: '-130px',
             lg: '-200px',
           },
           paddingRight: {
-            xs: '30px', // Added padding for the right side
-            md: '30px', // Added padding for the right side
+            xs: '30px',
+            md: '30px',
           },
           marginTop: {
             xs: '-80px',
