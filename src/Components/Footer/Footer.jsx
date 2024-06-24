@@ -4,7 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import PinterestIcon from '@mui/icons-material/Pinterest';
-import GridImage from './Grid-image';
+import { Image } from '@mui/icons-material';
 
 const Footer = () => {
   const theme = useTheme();
@@ -63,7 +63,15 @@ const Footer = () => {
               </IconButton>
             </Stack>
           </Grid>
-
+        <Box sx={{
+          marginLeft: {xs:'40px',md:'300px',lg: '300px' },
+          '@media (min-width: 600px) and (max-width: 810px)': {
+            marginLeft: '200px',
+          },
+          marginTop: {md:'20px'},
+          marginRight:{md:'-50px'}
+          
+        }} >
           <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Stack sx={{ gap: '15px', fontFamily: 'Poppins, sans-serif', color: 'black', marginTop: { xs: '20px', sm: '40px' } }}>
               <Grid container spacing={0} justifyContent="center">
@@ -102,12 +110,21 @@ const Footer = () => {
               </Grid>
             </Stack>
           </Grid>
-
-          <Grid item xs={12} sm={4} md={6} lg={6} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, alignItems: 'center', height: '100%' }}>
-            <Box sx={{ width: { xs: '100%', md: 'auto' }, textAlign: 'center', pr: { md: 4, lg: 6 } }}>
-              <GridImage />
-            </Box>
-          </Grid>
+          </Box>
+           <Box 
+           component="img"
+          src="assets/fotos-insta.png"
+          alt="Inspirational Image"
+          sx={{
+            display:{xs:'none', ms:'none', lg:'block'},
+            marginTop:'80px',
+            marginLeft:'150px',
+            height: '250px',
+            width: 'auto',
+           
+          }}
+        />
+            
         </Grid>
 
         <Box
