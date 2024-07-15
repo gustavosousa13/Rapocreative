@@ -171,7 +171,11 @@ const Presentation = () => {
             },
           }}
         >
-          Bem-vindo ao Rapó Creative! Somos um estúdio especializado na criação de estampas exclusivas para o mercado têxtil, trazendo toda a exuberância e a rica diversidade cultural do Brasil para cada peça. No Rapó Creative, nossa paixão por design se reflete em estampas vibrantes e únicas, que capturam a essência da brasilidade. Além de nossa coleção exclusiva, também oferecemos serviços de criação de estampas sob demanda, adaptando nossas criações ao seu estilo e necessidade. Venha descobrir um mundo de cores e formas inspiradoras conosco!
+          Bem-vindo ao Rapó Creative! Somos um estúdio especializado na criação de estampas exclusivas para o mercado têxtil, 
+          trazendo toda a exuberância e a rica diversidade cultural do Brasil para cada peça. No Rapó Creative, 
+          nossa paixão por design se reflete em estampas vibrantes e únicas, que capturam a essência da brasilidade. 
+          Além de nossa coleção exclusiva, também oferecemos serviços de criação de estampas sob demanda, adaptando nossas criações 
+          ao seu estilo e necessidade. Venha descobrir um mundo de cores e formas inspiradoras conosco!
         </Typography>
       </Box>
     </Box>

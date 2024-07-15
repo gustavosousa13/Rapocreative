@@ -28,9 +28,6 @@ function App() {
         <div id="portfólio">
         <ParallaxComponent /> 
         </div>  
-        <div id="contato">
-          <Subscribe />
-        </div>
         <Footer />
       </Box>
     </Router>

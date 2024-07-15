@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { HashLink as ScrollLink } from 'react-router-hash-link';
 
 const drawerWidth = 240;
-const navItems = ['Início', 'Serviços', 'Quem somos', 'Portfólio', 'Contato'];
+const navItems = ['Início', 'Serviços', 'Quem somos', 'Portfólio'];
 
 function DrawerAppBar(props) {
   const { window } = props;

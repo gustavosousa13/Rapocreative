@@ -37,7 +37,7 @@ const Title = styled(Typography)({
 
 const SubText = styled(Typography)({
   color: '#fff',
-  fontSize: '24px',
+  fontSize: '20px',
   textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
   zIndex: 1,
   marginBottom: '20px',

@@ -21,7 +21,6 @@ const Footer = () => {
     >
       <Container maxWidth="xl" sx={{ px: 0 }}>
         <Grid container spacing={5} alignItems="flex-start">
-          {/* First Block inserir espaçamento na imagine em relção ao texto */}
           <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: { xs: 'center', md: 'left' }, ml: { xs: '0px', md: '30px' } }}>
             <Box
               component="img"
@@ -65,47 +64,8 @@ const Footer = () => {
             </Stack>
           </Grid>
 
-          {/* Second Block */}
-          <Grid item xs={12} sm={4} md={3} lg={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Stack sx={{ gap: '15px', fontFamily: 'Poppins, sans-serif', color: 'black', marginTop: { xs: '60px', sm: '40px' }, marginLeft:{sm:'200px'} }}>
-              <Grid container spacing={0} justifyContent="center">
-                <Grid item xs={12} sm={12} md={12}>
-                  <Link href="#" underline="none">
-                    <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      INÍCIO
-                    </Typography>
-                  </Link>
-                  <Link href="#" underline="none">
-                    <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      SERVIÇOS
-                    </Typography>
-                  </Link>
-                  <Link href="#" underline="none">
-                    <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      QUEM SOMOS
-                    </Typography>
-                  </Link>
-                  <Link href="#" underline="none">
-                    <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      PORTIFÓLIO
-                    </Typography>
-                  </Link>
-                  <Link href="#" underline="none">
-                    <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      CONTATO
-                    </Typography>
-                  </Link>
-                  <Link href="#" underline="none">
-                    <Typography variant="body1" sx={{ letterSpacing: 0, color: 'black', padding: '10px' }}>
-                      ESTAMPAS
-                    </Typography>
-                  </Link>
-                </Grid>
-              </Grid>
-            </Stack>
-          </Grid>
-
-          {/* Third Block */}
+    
+          
           <Grid item xs={12} sm={4} md={4} lg={3} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Box 
               component="img"
@@ -115,8 +75,8 @@ const Footer = () => {
                 display: { xs: 'none', ms: 'none', lg: 'block' },
                 height: '250px',
                 width: 'auto',
-                ml: 'auto',
-                mr: { lg: '-300px' }, // anteriormente 100px 
+                ml: {md:'500px', lg:'500px'},
+                mr: { lg: '300px', md: '-200px' }, // anteriormente 100px 
                 mt: { xs: '0px', lg: '30px' }, 
               }}
             />
