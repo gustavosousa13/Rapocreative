@@ -72,10 +72,10 @@ const Footer = () => {
               src="assets/fotos-insta.png"
               alt="Inspirational Image"
               sx={{
-                display: { xs: 'none', ms: 'none', lg: 'block' },
+                display: { xs: 'none',md:'block', lg: 'block' },
                 height: '250px',
                 width: 'auto',
-                ml: {md:'500px', lg:'500px'},
+                ml: {md:'200px', lg:'400px'},
                 mr: { lg: '300px', md: '-200px' }, // anteriormente 100px 
                 mt: { xs: '0px', lg: '30px' }, 
               }}
