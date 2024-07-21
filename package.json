@@ -22,6 +22,8 @@
     "antd": "^5.18.0",
     "bootstrap": "^5.3.3",
     "eact": "^0.0.1-security",
+    "firebase": "^10.12.4",
+    "firestore": "^1.1.6",
     "public": "^0.1.5",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
